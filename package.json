@@ -1,0 +1,14 @@
+{
+  "name": "restaruant-management",
+  "version": "1.0.0",
+  "description": "An application for Restaurant Management System",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces":{
+    "packages": [
+      "apps/frontend",
+      "apps/backend"
+    ]
+  }
+}
