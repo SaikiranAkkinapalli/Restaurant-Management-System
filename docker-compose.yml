@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - '9000:80'
+  api:
+    container_name: api
+    build: ./backend/apps/api
+    ports:
+      - '8000:100'
