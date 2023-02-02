@@ -10,3 +10,27 @@ services:
     build: ./backend/api
     ports:
       - '3000:3000'
+  no-sql:
+    container_name: Mongo
+    image: mongo:3.6.2
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8282:8080
+  ledger-db:
+    image: codenotary/immudb:latest
+    ports:
+      - '3322:3322'
+      - '8080:8080'
+    container_name: ledger-db
+    environment:
+      - IMMUDB_ADDRESS=0.0.0.0
