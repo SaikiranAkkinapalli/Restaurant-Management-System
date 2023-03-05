@@ -4,7 +4,6 @@ WORKDIR /app
 COPY package.json /app
 RUN npm install
 COPY . /app
-RUN npm run build --prod
+RUN cd ./src/ && npm run build
 FROM nginx:1.20.1
 COPY --from=frontend /app/dist/frontend /usr/share/nginx/html
-EXPOSE 4200:80

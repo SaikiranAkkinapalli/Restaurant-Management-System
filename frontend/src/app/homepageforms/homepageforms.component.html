@@ -1,0 +1,68 @@
+<div class="formsplace">
+    <div class="forms">
+        <div class="homepagebuttonsplace">
+            <button [ngClass]="showlogin?'loginbutton':'normalloginbutton'" (click)="showLogin()">Login</button>
+            <button [ngClass]="showsignup?'signupbutton':'normalsignupbutton'" (click)="showSignup()">SignUp</button>
+        </div>
+        <div class="homepagesForm">
+            <div [ngClass]="showlogin?'loginformstyle':'hideloginformstyle'">
+                <form >
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your login email</mat-label>
+                        <input matInput placeholder="Enter you mail"  required>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                    </mat-form-field><br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field><br/>
+                    <div class="formbuttons">
+                        <button mat-button color="primary" type="submit">Submit</button>
+                        <button mat-button color="primary" type="reset">Cancel</button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div [ngClass]="showsignup?'showsignupformstyle':'signupformstyle'">
+                <form>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your signupbutton email</mat-label>
+                        <input matInput placeholder="Enter you mail"  required>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                    </mat-form-field><br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your signupbutton email</mat-label>
+                        <input matInput placeholder="Enter you mail"  required>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                    </mat-form-field><br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your signupbutton email</mat-label>
+                        <input matInput placeholder="Enter you mail"  required>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                    </mat-form-field><br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your signupbutton email</mat-label>
+                        <input matInput placeholder="Enter you mail"  required>
+                        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                    </mat-form-field><br/>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field><br/>
+                    <div class="formbuttons">
+                        <button mat-button color="primary" type="submit">Submit</button>
+                        <button mat-button color="primary" type="reset">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>

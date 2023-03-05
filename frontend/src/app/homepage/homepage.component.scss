@@ -1,0 +1,273 @@
+.homepage{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.heading{
+    flex-grow: 0.5;
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    color: white;
+    font-weight: bold;
+    background-color: #FFA500;
+}
+.homepagesForm{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 450px;
+    width: 400px;
+}
+.formbuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.loginformstyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    animation-name: showLogin;
+    animation-duration: 2s;
+}
+.signupformstyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin-left: -1200px;
+    animation-name: hideSignup;
+    animation-duration: 2s;
+}
+.formsplace{
+    flex-grow: 7;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+.loginbutton{
+    width: 80px;
+    height: 40px;
+    background-color: cyan;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    animation-name: highlightbutton;
+    animation-duration: 100ms;
+}
+.normalloginbutton{
+    width: 80px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    animation-name: normalbutton;
+    animation-duration: 100ms;
+}
+.normalsignupbutton{
+    width: 80px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    animation-name: normalbutton;
+    animation-duration: 100ms;
+}
+.signupbutton{
+    width: 80px;
+    height: 40px;
+    background-color: cyan;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    animation-name: highlightbutton;
+    animation-duration: 100ms;
+}
+.homepagebuttonsplace{
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    align-self: center;
+}
+.showsignupformstyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1200px;
+    width: 400px;
+    animation-name: showSignup;
+    animation-duration: 2s;
+}
+.hideloginformstyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin-left: 800px;
+    animation-name: hideLogin;
+    animation-duration: 2s;
+}
+.footer{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.mainbody{
+    flex-grow: 8;
+}
+
+@keyframes showSignup {
+    0%   {margin-left: -800px;}
+    100% {margin-left: -1200px;}
+}
+@keyframes hideSignup {
+    0%   {margin-left: -1200px;}
+    100% {margin-left: -800px;}
+}
+@keyframes showLogin {
+    0%   {margin-left: 800px;}
+    100% {margin-left: 0px;}
+}
+@keyframes hideLogin {
+    0%   {margin-left: 0px;}
+    100% {margin-left: 800px;}
+}
+@keyframes highlightbutton {
+    0% { background-color: aliceblue;}
+    100% {background-color: aqua;}
+}
+@keyframes normalbutton {
+    0% { background-color: aqua;}
+    100% {background-color: aliceblue;}
+}
+
+.wave1{
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    left: 0%;
+    background-color: #FFA500;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    animation-name: wave1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow: hidden;
+    border: 10px solid transparent; /*2*/
+    background: linear-gradient(45deg,#FFA500,#FFD580) border-box;
+}
+.wave2{
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    left: 0%;
+    background-color: #FFA500;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    animation-name: wave2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow: hidden;
+    border: 10px solid transparent; /*2*/
+    background: linear-gradient(45deg,#FFA500,#FFD580) border-box;
+}
+.wave3{
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    left: -50%;
+    background-color: #FFA500;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    animation-name: wave4;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow: hidden;
+    border: 10px solid transparent; /*2*/
+    background: linear-gradient(45deg,#FFA500,#FFD580) border-box;
+}
+.wave4{
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    left: 50%;
+    background-color: #FFA500;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    animation-name: wave3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    overflow: hidden;
+    border: 10px solid transparent; /*2*/
+    background: linear-gradient(45deg,#FFA500,#FFD580) border-box;
+}
+
+@keyframes wave1 {
+    0%   { left: 0%}
+    50% {left: -50%;}
+    100% {left: 0%;}
+
+}
+@keyframes wave2 {
+    0%   { left: 0%}
+    50% {left: 50%;}
+    100% {left: 0%;}
+}
+@keyframes wave3 {
+    0%   { left: -50%}
+    50% {left: 0;}
+    100% {left: -50%;}
+
+}
+@keyframes wave4 {
+    0%   { left: 50%}
+    50% {left: 0%;}
+    100% {left: 50%;}
+}
+.animationdiv{
+    flex-grow: 1;
+}
+.footerdiv{
+    flex-grow: 1;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    color: white;
+    background: #FFA500;
+}
+.loginsignupbutton{
+    color: white !important;
+    font-weight: bold;
+}
+.footerbuttons{
+    display: flex;
+    align-self: center !important;
+}
+
+.mdc-text-field{
+    width: 275px !important;
+}
+
+
+.mat-mdc-button.mat-primary {
+    --mdc-text-button-label-text-color: orange !important;
+}

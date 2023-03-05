@@ -10,6 +10,18 @@ services:
     build: ./backend/api
     ports:
       - '3000:3000'
+  sql-db:
+    container_name: sql-db
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB= tododb
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
   no-sql:
     container_name: Mongo
     image: mongo:3.6.2
@@ -19,6 +31,23 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     ports:
       - 27017:27017
+  mongo-express:
+    container_name: Mongo-adminer
+    image: mongo-express
+    environment:
+        - ME_CONFIG_MONGODB_SERVER=mongo
+        - ME_CONFIG_MONGODB_PORT=27017
+        - ME_CONFIG_MONGODB_ENABLE_ADMIN=false
+        - ME_CONFIG_MONGODB_AUTH_DATABASE=admin
+        - ME_CONFIG_MONGODB_AUTH_USERNAME=root
+        - ME_CONFIG_MONGODB_AUTH_PASSWORD=example
+        - ME_CONFIG_BASICAUTH_USERNAME=root
+        - ME_CONFIG_BASICAUTH_PASSWORD=example
+    depends_on:
+        - no-sql
+    ports:
+      - "8888:8081"
+
 
   adminer:
     image: adminer
@@ -34,3 +63,6 @@ services:
     container_name: ledger-db
     environment:
       - IMMUDB_ADDRESS=0.0.0.0
+volumes:
+  db:
+    driver: local

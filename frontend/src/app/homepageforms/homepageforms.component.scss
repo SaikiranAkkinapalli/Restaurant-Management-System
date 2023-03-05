@@ -1,0 +1,147 @@
+.homepage{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.heading{
+    flex-grow: 2;
+    font-size: x-large;
+    color: #000;
+    font-weight: bold;
+    background-color: aqua;
+}
+.homepagesForm{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 450px;
+    width: 400px;
+}
+.formbuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.loginformstyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    animation-name: showLogin;
+    animation-duration: 2s;
+}
+.signupformstyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin-left: -1200px;
+    animation-name: hideSignup;
+    animation-duration: 2s;
+}
+.formsplace{
+    flex-grow: 7;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+.loginbutton{
+    width: 80px;
+    height: 40px;
+    background-color: #FFA500;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    animation-name: highlightbutton;
+    animation-duration: 100ms;
+}
+.normalloginbutton{
+    width: 80px;
+    height: 40px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    animation-name: normalbutton;
+    animation-duration: 100ms;
+}
+.normalsignupbutton{
+    width: 80px;
+    height: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    animation-name: normalbutton;
+    animation-duration: 100ms;
+}
+.signupbutton{
+    width: 80px;
+    height: 40px;
+    background-color: #FFA500;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    animation-name: highlightbutton;
+    animation-duration: 100ms;
+}
+.homepagebuttonsplace{
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    align-self: center;
+}
+.showsignupformstyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1200px;
+    width: 400px;
+    animation-name: showSignup;
+    animation-duration: 2s;
+}
+.hideloginformstyle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin-left: 800px;
+    animation-name: hideLogin;
+    animation-duration: 2s;
+}
+.footer{
+    flex-grow: 7;
+    background-color: black;
+}
+
+@keyframes showSignup {
+    0%   {margin-left: -800px;}
+    100% {margin-left: -1200px;}
+}
+@keyframes hideSignup {
+    0%   {margin-left: -1200px;}
+    100% {margin-left: -800px;}
+}
+@keyframes showLogin {
+    0%   {margin-left: 800px;}
+    100% {margin-left: 0px;}
+}
+@keyframes hideLogin {
+    0%   {margin-left: 0px;}
+    100% {margin-left: 800px;}
+}
+@keyframes highlightbutton {
+    0% { background-color: aliceblue;}
+    100% {background-color: #FFA500;}
+}
+@keyframes normalbutton {
+    0% { background-color: #FFA500;}
+    100% {background-color: aliceblue;}
+}
