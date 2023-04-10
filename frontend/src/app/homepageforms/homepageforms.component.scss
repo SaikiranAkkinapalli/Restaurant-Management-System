@@ -145,3 +145,15 @@
     0% { background-color: #FFA500;}
     100% {background-color: aliceblue;}
 }
+.homepageinput{
+    width: 275px !important;
+    color: #FFA500;
+    border-color: #FFA500;
+}
+.homepageinput > label{
+    color: #FFA500 !important;
+}
+.homepageinput:focus{
+    color: #FFA500;
+    border-color: #FFA500;
+}

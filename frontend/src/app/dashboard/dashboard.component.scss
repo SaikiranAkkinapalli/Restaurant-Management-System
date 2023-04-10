@@ -1,0 +1,43 @@
+.menupart{
+    display: flex;
+    align-items: center;
+}
+.headerpart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.iconSize{
+    font-size: larger;
+}
+.profilemenu{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid orange;
+}
+.profilecardButtons{
+    display: flex;
+    align-items: center;
+    border: transparent;
+    background: transparent;
+    padding: 1em;
+    cursor: pointer;
+}
+.buttonLabel{
+    padding-left: 0.75em;
+}
+.profile-card{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 2.5px;
+}
+.dashboardBody{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+}
+.mainBody{
+    flex: 1;
+    display: flex;
+}

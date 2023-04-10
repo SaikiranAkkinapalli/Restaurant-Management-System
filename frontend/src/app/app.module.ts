@@ -7,12 +7,18 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from './material.module';
 import { HomepageformsComponent } from './homepageforms/homepageforms.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfilecardComponent } from './dashboard/profilecard/profilecard.component';
+import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    HomepageformsComponent
+    HomepageformsComponent,
+    DashboardComponent,
+    ProfilecardComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
