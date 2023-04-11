@@ -2,7 +2,7 @@
     <div>
         <mat-toolbar class="headerpart">
             <div class="menupart">
-                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <button (click)="toggleSideBar()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
                     <mat-icon>menu</mat-icon>
                 </button>
                 <span>Restaruant Management</span>
@@ -35,6 +35,6 @@
         </mat-toolbar>
     </div>
     <div class="mainBody">
-        <app-sidebar></app-sidebar>
+        <div [ngClass]="showsidebar?'displaySideBar':'hideSideBar'"><app-sidebar></app-sidebar></div>
     </div>
 </div>
